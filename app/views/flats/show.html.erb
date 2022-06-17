@@ -1,36 +1,46 @@
-hey
-  <%= link_to "Back", flats_path %>
+<div class="map"></div>
 
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="flat-show-card">
+        <h1><%= @flat.name %></h1>
+        <p class="flat-show-address"><%= @flat.address %></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+        <div class="map" style="background-image: url('https://www.neuf.tv/wp-content/uploads/2021/05/1621379202_798_Google-Maps-obtient-des-informations-dactivite-pour-les-zones-des.jpg')">
+        </div>
+      </div>
     </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+
+    <div class="col-4">
+      <div class="flat-show-card"></div>
+      <div class="flat-show-card"></div>
+      <div class="flat-show-card"></div>
     </div>
   </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%= link_to "Back", flats_path %>

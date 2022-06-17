@@ -21,8 +21,11 @@
               &nbsp; <i class="fa-solid fa-euro-sign mt-1 mx-1"></i><%= flat.number_of_guests %>
             </div>
           </div>
-          <div class="card-footer">
+          <div class="card-footer d-flex">
             <small class="text-muted"><%= link_to "More infos", flat_path(flat) %></small>
+            <small class="text-muted"><%= link_to "Edit", flat_path(flat), class:"mx-3", style:"color:orange" %></small>
+            <small class="text-muted"><%= link_to "Remove", flat_path(flat), style:"color:red" %></small>
+
           </div>
         </div>
       <% end %>
