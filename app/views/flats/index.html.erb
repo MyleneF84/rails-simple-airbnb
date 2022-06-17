@@ -1,17 +1,27 @@
-<div class="container mb-3">
-  <h1>All our Flats ( <%= Flat.count %> )</h1>
+<div class="container mt-3">
+  <h1>All our Flats</h1>
+
+  <div class="row">
+    <% if @query %>
+      <p>You searched for <%= @query %>.</p>
+    <% else %>
+    <p>All <%= Flat.count %> flats </p>
+    <% end %>
+  </div>
+
   <div class="row justify-content-around">
     <div class="col-6 d-flex">
-    <%= render "shared/card-flat" %>
+    <%#= render "shared/card-flat" %>
     </div>
   </div>
+
 
 
 
   <div class="row mt-3 justify-content-between">
     <div class="card-deck d-flex">
       <% @flats.each do |flat| %>
-        <div class="card mx-3">
+        <div class="card col-4 mx-3">
           <img class="card-img-top" src="https://images.unsplash.com/photo-1556784344-ad913c73cfc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmxhdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><%= flat.name %></h5>
