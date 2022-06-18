@@ -10,7 +10,7 @@
       <div class="flat-show-card">
         <h3>A bit more about this flat...</h3>
         <p><%= @flat.description %></p>
-        <div class="map" style="background-image: url('https://www.neuf.tv/wp-content/uploads/2021/05/1621379202_798_Google-Maps-obtient-des-informations-dactivite-pour-les-zones-des.jpg')">
+        <div class="map" style="background-image: url('<%= @flat.url_image %>')"  >
         </div>
       </div>
     </div>
@@ -50,24 +50,4 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%= link_to "Back", flats_path %>
+<%#= link_to "Back", flats_path %>
