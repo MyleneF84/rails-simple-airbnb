@@ -3,7 +3,7 @@
 
   <div class="row">
     <% if @query %>
-      <p>You searched for <%= @query %>.</p>
+      <p>You searched for <%= @query %>. We have <%= @flats.count %> <%= "flat".pluralize(@flats.count) %>  in this area.</p>
     <% else %>
     <p>All <%= Flat.count %> flats </p>
     <% end %>
