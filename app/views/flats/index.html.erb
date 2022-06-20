@@ -19,6 +19,7 @@
   <div class="row mt-3 justify-content-between">
     <div class="card-deck d-flex">
       <% @flats.each do |flat| %>
+      <%= link_to flat_path(flat) do %>
         <div class="card col-4 mx-3">
           <img class="flat-card-image" src= '<%= flat.url_image %>' alt="Card image cap">
           <div class="card-body">
@@ -35,6 +36,7 @@
             <small class="text-muted"><%= link_to "Remove", flat_path(flat), data: { turbo_method: :delete}, style:"color:red" %></small>
           </div>
         </div>
+        <% end %>
       <% end %>
     </div>
   </div>
